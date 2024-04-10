@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kakao Chat Landing View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="KakaoChatLandingViewController" customModule="kakaotalk_starter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UUC-g2-r7V">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="150" id="pm3-Ed-LhO" customClass="KakaoChatTableViewCell" customModule="kakaotalk_starter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pm3-Ed-LhO" id="02o-bq-H6N">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="보낸사람" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOc-x9-msR">
+                                                    <rect key="frame" x="145" y="26" width="59" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="메세지" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQx-BE-J8P">
+                                                    <rect key="frame" x="150" y="55" width="259" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="clO-c4-BVT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CXR-f1-i99">
+                                                    <rect key="frame" x="35" y="26" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="BCn-OB-Vkl"/>
+                                                        <constraint firstAttribute="width" constant="100" id="MtE-CB-uO3"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wje-dz-u3i">
+                                                    <rect key="frame" x="349.5" y="26" width="29.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jQx-BE-J8P" firstAttribute="leading" secondItem="CXR-f1-i99" secondAttribute="trailing" constant="15" id="HrR-N9-QZl"/>
+                                                <constraint firstItem="jQx-BE-J8P" firstAttribute="top" secondItem="UOc-x9-msR" secondAttribute="bottom" constant="8" id="XHh-7c-XCe"/>
+                                                <constraint firstItem="UOc-x9-msR" firstAttribute="top" secondItem="02o-bq-H6N" secondAttribute="topMargin" constant="15" id="ioe-lT-275"/>
+                                                <constraint firstItem="Wje-dz-u3i" firstAttribute="top" secondItem="02o-bq-H6N" secondAttribute="topMargin" constant="15" id="l5P-pf-eFc"/>
+                                                <constraint firstItem="UOc-x9-msR" firstAttribute="leading" secondItem="CXR-f1-i99" secondAttribute="trailing" constant="10" id="nnE-Nv-ztr"/>
+                                                <constraint firstItem="CXR-f1-i99" firstAttribute="top" secondItem="02o-bq-H6N" secondAttribute="topMargin" constant="15" id="oSy-P8-DBJ"/>
+                                                <constraint firstItem="jQx-BE-J8P" firstAttribute="trailing" secondItem="02o-bq-H6N" secondAttribute="trailingMargin" constant="15" id="pH4-WK-wrg"/>
+                                                <constraint firstItem="CXR-f1-i99" firstAttribute="leading" secondItem="02o-bq-H6N" secondAttribute="leadingMargin" constant="15" id="pi4-4n-0VM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Wje-dz-u3i" secondAttribute="trailing" constant="15" id="tPd-va-GTZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lastMessageLabel" destination="jQx-BE-J8P" id="2yw-um-pGG"/>
+                                            <outlet property="lastSentDateLabel" destination="Wje-dz-u3i" id="iLa-0y-mdt"/>
+                                            <outlet property="nameLabel" destination="UOc-x9-msR" id="e3d-ug-nXg"/>
+                                            <outlet property="senderImageView" destination="CXR-f1-i99" id="CZ8-KP-vCT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="UUC-g2-r7V" id="Cf3-59-cpg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
